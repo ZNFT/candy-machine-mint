@@ -139,6 +139,7 @@ const Home = (props: HomeProps) => {
           props.connection
         );
 
+        console.log(itemsRemaining)
       setIsSoldOut(itemsRemaining === 0);
       setStartDate(goLiveDate);
       setCandyMachine(candyMachine);
