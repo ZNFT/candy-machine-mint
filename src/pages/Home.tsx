@@ -3,7 +3,7 @@ import Countdown, { zeroPad } from "react-countdown";
 import { Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import * as anchor from "@project-serum/anchor";
-import { useWallet } from "@solana/wallet-adapter-react";
+import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import {
   CandyMachine,
   awaitTransactionSignatureConfirmation,
@@ -88,11 +88,11 @@ const Home = (props: HomeProps) => {
     severity: undefined,
   });
 
-  const wallet = useWallet();
+  const wallet = useAnchorWallet();
 
   const onMint = async () => {
     try {
-      if (wallet.connected && candyMachine?.program && wallet.publicKey) {
+      if (wallet && candyMachine?.program) {
         setIsMinting(true);
         const mintTxId = await mintOneToken(
           candyMachine,
@@ -153,12 +153,7 @@ const Home = (props: HomeProps) => {
 
   useEffect(() => {
     (async () => {
-      if (
-        !wallet ||
-        !wallet.publicKey ||
-        !wallet.signAllTransactions ||
-        !wallet.signTransaction
-      ) {
+      if (!wallet) {
         return;
       }
       const anchorWallet = {
@@ -272,7 +267,7 @@ const Home = (props: HomeProps) => {
                     disabled={!isActive || isMinting}
                     className={cx("button home__mint-button has-text-white", {
                       "is-loading": isMinting,
-                      "is-invisible": !wallet.connected,
+                      "is-invisible": !wallet,
                       "home__mint-button--sold-out": isSoldOut,
                     })}
                     onClick={onMint}
