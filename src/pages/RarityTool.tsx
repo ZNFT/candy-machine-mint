@@ -1,11 +1,4 @@
-import {
-  Icon,
-  IconSize,
-  Position,
-  Spinner,
-  SpinnerSize,
-  Toaster,
-} from "@blueprintjs/core";
+import { Icon, IconSize, Position, Toaster } from "@blueprintjs/core";
 import axios from "axios";
 import { debounce, find, get } from "lodash";
 import { useCallback, useEffect, useState } from "react";
@@ -18,13 +11,14 @@ import ratchetRick from "../images/ratchet-rick.png";
 import lightning from "../images/lightning.png";
 
 import "./RarityTool.scss";
+import BotCard from "../components/BotCard";
 
 export type BotType = {
   link: string;
   name: string;
 };
 
-type BotsKeyType = {
+export type BotsKeyType = {
   [key: string]: BotType;
 };
 
@@ -221,51 +215,22 @@ const RarityTool = () => {
               />
             </div>
           </div>
-          <div className="flex">
-            <div className="mt-5">
-              {loading && (
-                <div className="rarity-tool__placeholder-img">
-                  <div className="flex content-center h-full justify-center">
-                    {loading && <Spinner size={SpinnerSize.LARGE} />}
-                  </div>
-                </div>
-              )}
-              {!loading && (
-                <>
-                  {bot ? (
-                    <img
-                      className="rarity-tool__bot-image"
-                      alt="bot-pfp"
-                      src={bot.image}
-                    />
-                  ) : (
-                    <div className="rarity-tool__placeholder-img bg-gray-300"></div>
-                  )}
-                </>
-              )}
-              {bot && (
-                <div className="rarity- tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
-                  {bot?.name}
-                </div>
-              )}
-            </div>
-            <div className="ml-6">
-              <div className="mb-1 tracking-widest">UNIT #</div>
-              <div className="relative">
-                <Icon
-                  className="absolute rarity-tool__search-icon"
-                  icon="search"
-                  size={IconSize.STANDARD}
-                />
-                <input
-                  className="rarity-tool__search w-full mb-4 pl-5"
-                  type="text"
-                  onChange={(e) => setQuery(e.currentTarget.value)}
-                />
-              </div>
-              {renderTraits(bot)}
+          <div className="ml-6">
+            <div className="mb-1 tracking-widest">UNIT #</div>
+            <div className="relative">
+              <Icon
+                className="absolute rarity-tool__search-icon"
+                icon="search"
+                size={IconSize.STANDARD}
+              />
+              <input
+                className="rarity-tool__search w-full mb-4 pl-5"
+                type="text"
+                onChange={(e) => setQuery(e.currentTarget.value)}
+              />
             </div>
           </div>
+          <BotCard />
         </div>
       </div>
     </>
