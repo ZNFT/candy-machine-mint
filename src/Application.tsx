@@ -18,7 +18,6 @@ import {
 import "./Application.scss";
 import Presale from "./pages/Presale";
 import DomainHomePage from "./pages/DomainHomePage";
-import RarityTool from "./pages/RarityTool";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -51,12 +50,9 @@ const Application = () => {
   return (
     <Router history={customHistory}>
       <div className="app">
-        <Route exact path="/rarity">
-          <RarityTool />
-        </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            <Route exact path="/mint-wv2">
+            {/* <Route exact path="/mint-wv2">
               <Home
                 candyMachineId={candyMachineId}
                 config={config}
@@ -75,7 +71,7 @@ const Application = () => {
                 treasury={treasury}
                 txTimeout={txTimeout}
               />
-            </Route>
+            </Route> */}
           </WalletProvider>
         </ConnectionProvider>
         <Route exact path="/" component={DomainHomePage} />
