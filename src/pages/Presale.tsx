@@ -160,7 +160,7 @@ const Presale = (props: PresaleProps) => {
   const lsWave = localStorage.getItem(presaleWaveId);
   const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
   const isOverThreshold = mintSuccessTimes >= threshold;
-  const isActive = true
+  const isActive = (Date.now() >= startDate || countdownComplete) && !isSoldOut;
   const notActive = !isActive || isSoldOut || isOverThreshold;
   // const notActive = !isActive || isSoldOut;
 
