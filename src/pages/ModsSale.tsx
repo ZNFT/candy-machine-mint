@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Countdown from "react-countdown";
 import { Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import * as anchor from "@project-serum/anchor";
@@ -18,10 +17,7 @@ import cx from "classnames";
 import logo from "../images/logo.png";
 import vendingMachine from "../images/vending-machine.png";
 
-import { countdownRenderer } from "./Home";
-import { wave } from "../Application";
 import Header from "../components/Header";
-import { register_tab_GUID } from "../utils/one-browser";
 
 interface AlertState {
   open: boolean;
@@ -33,26 +29,18 @@ interface PresaleProps {
   candyMachineId: anchor.web3.PublicKey;
   config: anchor.web3.PublicKey;
   connection: anchor.web3.Connection;
-  startDate: number;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
 }
 
-const Presale = (props: PresaleProps) => {
-  register_tab_GUID();
-  const threshold = 1;
+const ModsLink = (props: PresaleProps) => {
   const [itemsRemaining, setItemsRemaining] = useState<number | null>(null);
   const [isMinting, setIsMinting] = useState(false);
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
-  const presaleWaveId = wave + "p";
 
   // FOR TESTING
   // const startDate = 1632809802316;
 
-  const startDate = props.startDate * 1000;
-  const [countdownComplete, setCountdownComplete] = useState<boolean>(
-    Date.now() >= startDate
-  );
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -80,14 +68,6 @@ const Presale = (props: PresaleProps) => {
         );
 
         if (!status?.err) {
-          const lsItem = localStorage.getItem(presaleWaveId);
-          lsItem
-            ? localStorage.setItem(
-                presaleWaveId,
-                (parseInt(lsItem, 10) + 1).toString()
-              )
-            : localStorage.setItem(presaleWaveId, "1");
-
           setAlertState({
             open: true,
             message: "Congratulations! Mint successful!",
@@ -155,14 +135,6 @@ const Presale = (props: PresaleProps) => {
   }, [wallet, props.candyMachineId, props.connection]);
 
   const isSoldOut = itemsRemaining === 0;
-  const mintPeriodOver = Date.now() - startDate > 60000;
-
-  const lsWave = localStorage.getItem(presaleWaveId);
-  const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
-  const isOverThreshold = mintSuccessTimes >= threshold;
-  const isActive = (Date.now() >= startDate || countdownComplete) && !isSoldOut;
-  const notActive = !isActive || isSoldOut || isOverThreshold;
-  // const notActive = !isActive || isSoldOut;
 
   return (
     <>
@@ -170,17 +142,6 @@ const Presale = (props: PresaleProps) => {
       <section className="home">
         <div className="pb-4" />
         <div className="home__mosaic" />
-        {!isSoldOut && !mintPeriodOver && (
-          <div>
-            <Countdown
-              daysInHours
-              className="home__countdown-timer"
-              date={startDate}
-              onComplete={() => setCountdownComplete(true)}
-              renderer={countdownRenderer}
-            />
-          </div>
-        )}
         <section className="hero">
           <div className="hero-body columns is-vcentered">
             <div className="container column pr-6">
@@ -194,24 +155,16 @@ const Presale = (props: PresaleProps) => {
                   </WalletModalProvider>
                 </div>
                 <div className="has-text-centered">
-                  {!isActive || isSoldOut ? (
-                    <img
-                      className="home__vending-machine"
-                      src={vendingMachine}
-                      alt="vending-machine"
-                    />
-                  ) : (
-                    <img
-                      className="home__vending-machine"
-                      src={vendingMachine}
-                      alt="vending-machine"
-                    />
-                  )}
+                  <img
+                    className="home__vending-machine"
+                    src={vendingMachine}
+                    alt="vending-machine"
+                  />
                 </div>
                 {wallet?.connected && (
                   <div className="home__mint-machine has-text-centered mt-5">
                     <button
-                      disabled={notActive || isMinting}
+                      disabled={isMinting}
                       className={cx("button home__mint-button has-text-white", {
                         "is-loading": isMinting,
                         "is-invisible": !wallet.connected,
@@ -244,4 +197,4 @@ const Presale = (props: PresaleProps) => {
   );
 };
 
-export default Presale;
+export default ModsLink;

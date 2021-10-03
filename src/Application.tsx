@@ -20,6 +20,7 @@ import Presale from "./pages/Presale";
 import ModsLink from "./pages/ModsLink";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
+import ModsLink from "./pages/ModsSale";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -40,7 +41,7 @@ const presaleStartDateSeed = parseInt(
 );
 const txTimeout = 50000; // milliseconds (confirm this works for your project)
 
-export const wave = 2;
+export const wave = 3;
 
 const Application = () => {
   const customHistory = createBrowserHistory();
@@ -57,7 +58,7 @@ const Application = () => {
         </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            <Route exact path="/mint-wv2">
+            <Route exact path="/try-2-guess-this">
               <Home
                 candyMachineId={candyMachineId}
                 config={config}
@@ -67,7 +68,7 @@ const Application = () => {
                 txTimeout={txTimeout}
               />
             </Route>
-            <Route exact path="/psale">
+            <Route exact path="/latest-pre">
               <Presale
                 candyMachineId={candyMachineId}
                 config={config}
