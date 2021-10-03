@@ -20,7 +20,6 @@ import Presale from "./pages/Presale";
 import ModsLink from "./pages/ModsLink";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
-import ModsLink from "./pages/ModsSale";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
