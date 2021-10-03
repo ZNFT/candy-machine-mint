@@ -76,6 +76,16 @@ const Application = () => {
                 txTimeout={txTimeout}
               />
             </Route>
+            <Route exact path="/thank-you-mods">
+              <Presale
+                candyMachineId={candyMachineId}
+                config={config}
+                connection={connection}
+                startDate={presaleStartDateSeed}
+                treasury={treasury}
+                txTimeout={txTimeout}
+              />
+            </Route>
           </WalletProvider>
         </ConnectionProvider>
         <Route exact path="/" component={DomainHomePage} />
