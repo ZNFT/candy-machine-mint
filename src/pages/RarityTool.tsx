@@ -39,7 +39,7 @@ const getRarityString = (
   traitName: string | undefined
 ) => {
   if (
-    (category === "Equipment" && traitName === "None") ||
+    (category === "Equipment" && traitName === "none") ||
     rarity === RarityTypes.COMMON
   ) {
     return "COMMON";
@@ -87,6 +87,7 @@ const RarityTool = () => {
     axios
       .get(bots[url].link)
       .then((response) => {
+        console.log("response", response.data);
         setBot(response.data);
         setLoading(false);
       })
@@ -113,11 +114,18 @@ const RarityTool = () => {
     });
   };
 
-  const renderIcon = (rarity: string) => {
+  const renderIcon = (
+    rarity: string,
+    category: string,
+    traitName: string | undefined
+  ) => {
+    const isNoneEquipment = category === "Equipment" && traitName === "none";
+    const isNoneDamage = category === "Damage" && traitName === "none";
     const classname = cx("rarity-tool__icon", {
-      "rarity-tool__icon--common": rarity === RarityTypes.COMMON,
+      "rarity-tool__icon--common":
+        rarity === RarityTypes.COMMON || isNoneEquipment,
       "rarity-tool__icon--rare": rarity === RarityTypes.RARE,
-      "rarity-tool__icon--epic": rarity === RarityTypes.EPIC,
+      "rarity-tool__icon--epic": rarity === RarityTypes.EPIC || isNoneDamage,
       "rarity-tool__icon--legendary": rarity === RarityTypes.LEGENDARY,
       "rarity-tool__icon--unknown":
         rarity === RarityTypes.UNKNOWN || rarity === "N/A",
@@ -167,7 +175,7 @@ const RarityTool = () => {
               </div>
               <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
                 {bot ? getRarityString(rarity, category, traitName) : "?"}
-                {bot && renderIcon(rarity)}
+                {bot && renderIcon(rarity, category, traitName)}
               </div>
             </div>
           );
