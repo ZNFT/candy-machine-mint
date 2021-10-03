@@ -51,7 +51,7 @@ const Application = () => {
   return (
     <Router history={customHistory}>
       <div className="app">
-        <Route exact path="/rarity-tool">
+        <Route exact path="/rarity">
           <RarityTool />
         </Route>
         <ConnectionProvider endpoint={endpoint}>
@@ -66,7 +66,7 @@ const Application = () => {
                 txTimeout={txTimeout}
               />
             </Route>
-            {/* <Route exact path="/psale">
+            <Route exact path="/psale">
               <Presale
                 candyMachineId={candyMachineId}
                 config={config}
