@@ -44,7 +44,7 @@ const getRarityString = (
   ) {
     return "COMMON";
   } else if (
-    (rarity === "none" && category === "Damage") ||
+    (traitName === "none" && category === "Damage") ||
     rarity === RarityTypes.EPIC
   ) {
     return "PRETTY EPIC";
