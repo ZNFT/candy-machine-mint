@@ -23,6 +23,7 @@ import vendingMachine from "../images/vending-machine.png";
 import { countdownRenderer } from "./Home";
 import { wave } from "../Application";
 import Header from "../components/Header";
+// import { register_tab_GUID } from "../utils/one-browser";
 
 interface AlertState {
   open: boolean;
@@ -40,11 +41,12 @@ interface PresaleProps {
 }
 
 const Presale = (props: PresaleProps) => {
-  const threshold = 3;
+  // register_tab_GUID();
+  // const threshold = 1;
   const [itemsRemaining, setItemsRemaining] = useState<number | null>(null);
   const [isMinting, setIsMinting] = useState(false);
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
-  const presaleWaveId = wave + "p";
+  // const presaleWaveId = wave + "p";
 
   // FOR TESTING
   // const startDate = 1632809802316;
@@ -80,13 +82,13 @@ const Presale = (props: PresaleProps) => {
         );
 
         if (!status?.err) {
-          const lsItem = localStorage.getItem(presaleWaveId);
-          lsItem
-            ? localStorage.setItem(
-                presaleWaveId,
-                (parseInt(lsItem, 10) + 1).toString()
-              )
-            : localStorage.setItem(presaleWaveId, "1");
+          // const lsItem = localStorage.getItem(presaleWaveId);
+          // lsItem
+          //   ? localStorage.setItem(
+          //       presaleWaveId,
+          //       (parseInt(lsItem, 10) + 1).toString()
+          //     )
+          //   : localStorage.setItem(presaleWaveId, "1");
 
           setAlertState({
             open: true,
@@ -161,11 +163,12 @@ const Presale = (props: PresaleProps) => {
     wallet.publicKey?.toBase58() &&
     whitelistedIds.includes(wallet.publicKey?.toBase58());
 
-  const lsWave = localStorage.getItem(presaleWaveId);
-  const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
-  const isOverThreshold = mintSuccessTimes >= threshold;
+  // const lsWave = localStorage.getItem(presaleWaveId);
+  // const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
+  // const isOverThreshold = mintSuccessTimes >= threshold;
   const isActive = (Date.now() >= startDate || countdownComplete) && !isSoldOut;
-  const notActive = !isActive || isSoldOut || isOverThreshold;
+  // const notActive = !isActive || isSoldOut || isOverThreshold;
+  const notActive = !isActive || isSoldOut;
 
   return (
     <>
