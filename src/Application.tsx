@@ -17,6 +17,7 @@ import {
 
 import "./Application.scss";
 import Presale from "./pages/Presale";
+import ModsLink from "./pages/ModsLink";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
 
@@ -68,6 +69,16 @@ const Application = () => {
             </Route>
             <Route exact path="/psale">
               <Presale
+                candyMachineId={candyMachineId}
+                config={config}
+                connection={connection}
+                startDate={presaleStartDateSeed}
+                treasury={treasury}
+                txTimeout={txTimeout}
+              />
+            </Route>
+            <Route exact path="/thank-you-mods">
+              <ModsLink
                 candyMachineId={candyMachineId}
                 config={config}
                 connection={connection}
