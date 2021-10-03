@@ -2,7 +2,6 @@ import { Position, Spinner, SpinnerSize, Toaster } from "@blueprintjs/core";
 import axios from "axios";
 import { debounce, find, get } from "lodash";
 import { useCallback, useEffect, useState } from "react";
-import AttributeList from "../components/AttributeList";
 import Header from "../components/Header";
 import { rarityHashMap, RarityTypes } from "../utils/attribute-hash";
 import { botsJson } from "../utils/bots";
@@ -40,23 +39,21 @@ const getRarityString = (
   traitName: string | undefined
 ) => {
   if (
+    (category === "Equipment" && traitName === "None") ||
+    rarity === RarityTypes.COMMON
+  ) {
+    return "COMMON";
+  } else if (
     (rarity === "none" && category === "Damage") ||
     rarity === RarityTypes.EPIC
   ) {
     return "PRETTY EPIC";
   } else if (rarity === RarityTypes.RARE) {
     return "LOOKS RARE";
-  } else if (
-    rarity === RarityTypes.COMMON ||
-    (category === "Equipment" && traitName === "None")
-  ) {
-    return "COMMON";
-  } else if (
-    rarity === "N/A" ||
-    rarity === RarityTypes.LEGENDARY ||
-    rarity === RarityTypes.UNKNOWN
-  ) {
+  } else if (rarity === "N/A" || rarity === RarityTypes.UNKNOWN) {
     return "HOLY S**T!! WTF IS THAT?!";
+  } else if (rarity === RarityTypes.LEGENDARY) {
+    return "D$%#MN THATS LEGENDARY";
   }
 };
 
@@ -122,7 +119,8 @@ const RarityTool = () => {
       "rarity-tool__icon--rare": rarity === RarityTypes.RARE,
       "rarity-tool__icon--epic": rarity === RarityTypes.EPIC,
       "rarity-tool__icon--legendary": rarity === RarityTypes.LEGENDARY,
-      "rarity-tool__icon--unknown": rarity === RarityTypes.UNKNOWN,
+      "rarity-tool__icon--unknown":
+        rarity === RarityTypes.UNKNOWN || rarity === "N/A",
     });
     return <div className={classname} />;
   };
@@ -152,7 +150,7 @@ const RarityTool = () => {
     }
     return (
       <div>
-        {categories.map((category) => {
+        {categories.map((category, index) => {
           const matchingCategory = find(
             bot?.attributes,
             (trait) => trait.trait_type === category
@@ -160,7 +158,7 @@ const RarityTool = () => {
           const traitName = matchingCategory?.value;
           let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
           return (
-            <div className="tracking-widest flex uppercase">
+            <div key={index} className="tracking-widest flex uppercase">
               <div className="text-white text-center rarity-tool__trait rarity-tool__trait--background rarity-tool__trait--bordered">
                 {category === "Backgrounds" ? "Background" : category}
               </div>
