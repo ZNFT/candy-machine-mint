@@ -23,7 +23,6 @@ import vendingMachine from "../images/vending-machine.png";
 import emptyMachine from "../images/empty-machine.png";
 
 import "./Home.scss";
-import { AlertTitle } from "@material-ui/lab";
 
 export const countdownRenderer = ({
   hours,

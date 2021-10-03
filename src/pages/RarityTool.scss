@@ -4,6 +4,7 @@
   &__bot-image {
     border: 4px solid black;
     width: 240px;
+    min-width: 150px;
   }
 
   &__bot-name {
@@ -102,6 +103,12 @@
     border: 4px solid black;
     border-radius: 3px;
     height: 34px;
+    font-size: 19px;
+  }
+
+  &__search-icon {
+    left: 9px;
+    top: 8px;
   }
 
   &__trait {

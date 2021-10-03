@@ -1,4 +1,11 @@
-import { Position, Spinner, SpinnerSize, Toaster } from "@blueprintjs/core";
+import {
+  Icon,
+  IconSize,
+  Position,
+  Spinner,
+  SpinnerSize,
+  Toaster,
+} from "@blueprintjs/core";
 import axios from "axios";
 import { debounce, find, get } from "lodash";
 import { useCallback, useEffect, useState } from "react";
@@ -78,7 +85,7 @@ const RarityTool = () => {
   function fetchData(url: string) {
     if (!url || !bots[url]) {
       if (url !== "") {
-        showErrorToast();
+        showToast(1);
       }
       return;
     }
@@ -94,9 +101,10 @@ const RarityTool = () => {
       .catch((err) => console.log(err));
   }
 
-  const showErrorToast = () => {
-    AppToaster.show({
-      message: (
+  const showToast = (num: number) => {
+    let message;
+    if (num === 1) {
+      message = (
         <div className="text-3xl uppercase flex items-center rarity-tool__error-toast">
           <div>
             <img
@@ -110,7 +118,12 @@ const RarityTool = () => {
             Quit wasting my time!!"
           </div>
         </div>
-      ),
+      );
+    } else if (num === 2) {
+      message = <div>sdf</div>;
+    }
+    AppToaster.show({
+      message,
     });
   };
 
@@ -230,18 +243,25 @@ const RarityTool = () => {
                   )}
                 </>
               )}
-
-              <div className="rarity-tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
+              <div className="rarity- tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
                 {bot?.name}
               </div>
             </div>
             <div className="ml-6">
               <div className="mb-1 tracking-widest">UNIT #</div>
-              <input
-                className="rarity-tool__search w-full mb-4"
-                type="text"
-                onChange={(e) => setQuery(e.currentTarget.value)}
-              />
+              <div className="relative">
+                <Icon
+                  className="absolute rarity-tool__search-icon"
+                  icon="search"
+                  size={IconSize.STANDARD}
+                />
+                <input
+                  className="rarity-tool__search w-full mb-4 pl-5"
+                  type="text"
+                  onChange={(e) => setQuery(e.currentTarget.value)}
+                />
+              </div>
+
               {renderTraits(bot)}
             </div>
           </div>

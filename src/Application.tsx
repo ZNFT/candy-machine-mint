@@ -56,7 +56,7 @@ const Application = () => {
         </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            <Route exact path="/mint-wv2">
+            <Route exact path="/try-to-guess">
               <Home
                 candyMachineId={candyMachineId}
                 config={config}
