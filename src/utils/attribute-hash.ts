@@ -10,7 +10,7 @@ export const rarityHashMap = {
   'Pink': RarityTypes.COMMON,
   'Citrus': RarityTypes.COMMON,
   'Sky': RarityTypes.COMMON,
-  'Silver': RarityTypes.COMMON,
+  'Silver ': RarityTypes.COMMON,
   'Cobalt':RarityTypes.COMMON,
   'Rose Quartz': RarityTypes.COMMON,
   'Nuclear': RarityTypes.COMMON,
