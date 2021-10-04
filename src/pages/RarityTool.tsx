@@ -34,12 +34,11 @@ const RarityTool = () => {
   }, [query, debounceLoadData]);
 
   function getBotUrls(id: string) {
-    const totalBots = getBotsFromHash(id);
+    const totalBots = getBotsFromHash(id).slice(0, 2);
     if ((!id || totalBots.length === 0) && id !== "") {
       showToast(1);
       return;
     } else {
-      console.log("total", totalBots);
       setBots(totalBots);
       if (totalBots.length > 1) {
         setTimeout(() => showToast(2), 3000);
