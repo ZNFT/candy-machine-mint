@@ -4,7 +4,6 @@ import { duplicates } from "./duplicate-bots"
 
 export const getBotsFromHash = (num: string) => {
   const botsArray: BotType[] = []
-  console.log('num', num, typeof num)
   if(botsJson[num]){
     botsArray.push(botsJson[num])
   }

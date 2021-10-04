@@ -40,7 +40,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     axios
       .get(link)
       .then((response) => {
-        console.log("rd", response.data);
+        // console.log("data", response.data);
         setBot(response.data);
         setLoading(false);
       })
@@ -53,12 +53,12 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     traitName: string | undefined
   ) => {
     if (
-      (category === "Equipment" && traitName === "none") ||
+      (category === "Equipment" && traitName === "NONE") ||
       rarity === RarityTypes.COMMON
     ) {
       return "COMMON";
     } else if (
-      (traitName === "none" && category === "Damage") ||
+      (traitName === "NONE" && category === "Damage") ||
       rarity === RarityTypes.EPIC
     ) {
       return "PRETTY EPIC";
@@ -121,10 +121,8 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
-          const traitName = cleanTraitName(matchingCategory?.value);
-          let rarity =
-            get(rarityHashMap, [`${traitName}`], null) ||
-            get(rarityHashMap, [`${traitName?.toLowerCase()}`], "N/A");
+          const traitName = cleanTraitName(matchingCategory?.value) || "";
+          let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
           return (
             <div key={index} className="tracking-widest flex uppercase">
               <div className="text-white text-center rarity-tool__trait rarity-tool__trait--background rarity-tool__trait--bordered">
