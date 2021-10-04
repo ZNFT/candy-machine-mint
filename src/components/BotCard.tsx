@@ -78,8 +78,8 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     category: string,
     traitName: string | undefined
   ) => {
-    const isNoneEquipment = category === "Equipment" && traitName === "none";
-    const isNoneDamage = category === "Damage" && traitName === "none";
+    const isNoneEquipment = category === "Equipment" && traitName === "NONE";
+    const isNoneDamage = category === "Damage" && traitName === "NONE";
     const classname = cx("rarity-tool__icon", {
       "rarity-tool__icon--common":
         rarity === RarityTypes.COMMON || isNoneEquipment,
@@ -121,7 +121,8 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
-          const traitName = cleanTraitName(matchingCategory?.value) || "";
+          const traitName =
+            cleanTraitName(matchingCategory?.value, category) || "";
           let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
           return (
             <div key={index} className="tracking-widest flex uppercase">
