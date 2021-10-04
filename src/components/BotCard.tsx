@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import { rarityHashMap, RarityTypes } from "../utils/attribute-hash";
 import cx from "classnames";
 import { find, get } from "lodash";
+import { getWaveName } from "../utils/getBotsFromHash";
+import { cleanTraitName } from "../utils/cleanTraitName";
 
 type Props = {
   bot: BotType;
@@ -34,12 +36,11 @@ const BotCard = ({ bot: { link, name } }: Props) => {
   }, [link]);
 
   const fetchBot = (link: string) => {
-    console.log("fetching", link);
     setLoading(true);
     axios
       .get(link)
       .then((response) => {
-        console.log("response", response.data);
+        console.log("rd", response.data);
         setBot(response.data);
         setLoading(false);
       })
@@ -63,10 +64,12 @@ const BotCard = ({ bot: { link, name } }: Props) => {
       return "PRETTY EPIC";
     } else if (rarity === RarityTypes.RARE) {
       return "LOOKS RARE";
-    } else if (rarity === "N/A" || rarity === RarityTypes.UNKNOWN) {
+    } else if (rarity === RarityTypes.UNKNOWN) {
       return "HOLY S**T!! WTF IS THAT?!";
     } else if (rarity === RarityTypes.LEGENDARY) {
       return "D$%#MN THATS LEGENDARY";
+    } else if (rarity === "N/A") {
+      return "UNKNOWN TRAIT, REPORT TO DEVS";
     }
   };
 
@@ -83,8 +86,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
       "rarity-tool__icon--rare": rarity === RarityTypes.RARE,
       "rarity-tool__icon--epic": rarity === RarityTypes.EPIC || isNoneDamage,
       "rarity-tool__icon--legendary": rarity === RarityTypes.LEGENDARY,
-      "rarity-tool__icon--unknown":
-        rarity === RarityTypes.UNKNOWN || rarity === "N/A",
+      "rarity-tool__icon--unknown": rarity === RarityTypes.UNKNOWN,
     });
     return <div className={classname} />;
   };
@@ -119,8 +121,10 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
-          const traitName = matchingCategory?.value;
-          let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
+          const traitName = cleanTraitName(matchingCategory?.value);
+          let rarity =
+            get(rarityHashMap, [`${traitName}`], null) ||
+            get(rarityHashMap, [`${traitName?.toLowerCase()}`], "N/A");
           return (
             <div key={index} className="tracking-widest flex uppercase">
               <div className="text-white text-center rarity-tool__trait rarity-tool__trait--background rarity-tool__trait--bordered">
@@ -131,7 +135,9 @@ const BotCard = ({ bot: { link, name } }: Props) => {
               </div>
               <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
                 {bot ? getRarityString(rarity, category, traitName) : "?"}
-                {bot && renderIcon(rarity, category, traitName)}
+                {bot &&
+                  rarity !== "N/A" &&
+                  renderIcon(rarity, category, traitName)}
               </div>
             </div>
           );
@@ -141,7 +147,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
   };
 
   return (
-    <div className="flex my-4">
+    <div className="bot-card flex my-4">
       <div className="mr-4">
         {loading && (
           <div className="rarity-tool__placeholder-img">
@@ -164,8 +170,11 @@ const BotCard = ({ bot: { link, name } }: Props) => {
           </>
         )}
         {bot && (
-          <div className="rarity- tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
-            {bot?.name}
+          <div className="rarity-tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
+            <div>
+              <div>{getWaveName(bot.collection.name)}</div>
+              <div>{bot.name}</div>
+            </div>
           </div>
         )}
       </div>

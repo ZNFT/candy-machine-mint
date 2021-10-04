@@ -2,7 +2,6 @@ import { Icon, IconSize, Position, Toaster } from "@blueprintjs/core";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 import Header from "../components/Header";
-import { botsJson } from "../utils/bots";
 import { getBotsFromHash } from "../utils/getBotsFromHash";
 import ratchetRick from "../images/ratchet-rick.png";
 import lightning from "../images/lightning.png";
@@ -24,7 +23,6 @@ export const AppToaster = Toaster.create({
 });
 
 const RarityTool = () => {
-  const bots: BotsKeyType = botsJson;
   const [query, setQuery] = useState("");
   const [botsArray, setBots] = useState<BotType[]>([]);
 
@@ -36,13 +34,17 @@ const RarityTool = () => {
   }, [query, debounceLoadData]);
 
   function getBotUrls(id: string) {
-    if (!id || !bots[id]) {
-      if (id !== "") {
-        showToast(1);
-      }
+    const totalBots = getBotsFromHash(id);
+    if ((!id || totalBots.length === 0) && id !== "") {
+      showToast(1);
       return;
+    } else {
+      console.log("total", totalBots);
+      setBots(totalBots);
+      if (totalBots.length > 1) {
+        setTimeout(() => showToast(2), 3000);
+      }
     }
-    setBots(getBotsFromHash(id));
   }
 
   const showToast = (num: number) => {
@@ -64,7 +66,21 @@ const RarityTool = () => {
         </div>
       );
     } else if (num === 2) {
-      message = <div>sdf</div>;
+      message = (
+        <div className="text-3xl uppercase flex items-center rarity-tool__error-toast">
+          <div>
+            <img
+              className="rarity-tool__rick--angry"
+              src={ratchetRick}
+              alt="ratchet-rick"
+            />
+          </div>
+          <div className="rarity-tool__error-toast--slide-in ml-5 text-red-800">
+            "WHAT?!?! The FK?! a pair? probably nothing
+            <br />. . . "
+          </div>
+        </div>
+      );
     }
     AppToaster.show({
       message,
