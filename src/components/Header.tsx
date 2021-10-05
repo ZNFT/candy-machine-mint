@@ -34,6 +34,14 @@ export default function Header() {
           >
             <Button className="bp3-minimal" icon="chat" text="Discord" />
           </a>
+          <a
+            className="header__nav-link is-size-7"
+            href="https://mint.irrelevants.com/rarity"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="bp3-minimal" icon="search" text="Rarity" />
+          </a>
         </Navbar.Group>
       </Navbar>
     </section>

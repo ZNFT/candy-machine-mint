@@ -99,11 +99,3 @@ export const rarityHashMap = {
   'GARDEN': RarityTypes.UNKNOWN,
   'CRACKED': RarityTypes.UNKNOWN,
 }
-
-export const attributesArray = {
-  background: ['Pink', 'Citrus', 'Sky', 'Ocean', 'Fruit', 'Midnight', 'Graph', 'Future', 'Z Waves', 'Infrared', 'Matte', 'Black on Black'],
-  body: ['Silver', 'Cobalt', 'Rose Quartz', 'Nuclear', 'Copper', 'Gold', 'Rusty', 'Amethyst', 'Diamond', 'Graphite', 'Rainbow', 'Crystal Blue', 'Crystal Red', 'Crystal Yellow', 'Crystal White'],
-  expression: ['!Oh','Crying', 'Zen', 'Grateful', 'Short Circuit', 'Winky', 'Star Stuck', 'Grills', 'Terminator', 'Gum', 'Bot', 'Screentime', 'Mecha Mask'],
-  equipment: ['Receiver', 'Sprout', 'Antennae', 'Hanabi', 'None', 'Plasma', 'Daisy', 'Energy Sword', 'Fried Egg', 'The Nest', 'Cool Chameleon', 'Flame Chameleon', 'Double Cool Chameleon', 'Double Flame Chameleon', 'Sol Sword'],
-  damage: ['Pristine', 'Scuffed', 'Abused', 'None']
-}

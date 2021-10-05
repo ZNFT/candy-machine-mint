@@ -20,6 +20,7 @@ import Presale from "./pages/Presale";
 import ModsLink from "./pages/ModsLink";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
+import TokenVerification from "./pages/TokenVerification";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -57,7 +58,7 @@ const Application = () => {
         </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            <Route exact path="/try-2-guess-this">
+            {/* <Route exact path="/try-2-guess-this">
               <Home
                 candyMachineId={candyMachineId}
                 config={config}
@@ -76,8 +77,8 @@ const Application = () => {
                 treasury={treasury}
                 txTimeout={txTimeout}
               />
-            </Route>
-            <Route exact path="/thank-you-mods">
+            </Route> */}
+            {/* <Route exact path="/thank-you-mods">
               <ModsLink
                 candyMachineId={candyMachineId}
                 config={config}
@@ -86,7 +87,10 @@ const Application = () => {
                 treasury={treasury}
                 txTimeout={txTimeout}
               />
-            </Route>
+            </Route> */}
+            {/* <Route exact path="/verifier">
+              <TokenVerification />
+            </Route> */}
           </WalletProvider>
         </ConnectionProvider>
         <Route exact path="/" component={DomainHomePage} />
