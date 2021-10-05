@@ -65,7 +65,7 @@ export const rarityHashMap = {
   'MATTE': RarityTypes.LEGENDARY,
   'BLACKONBLACK': RarityTypes.LEGENDARY,
   'CONSTELLATION':RarityTypes.LEGENDARY,
-  'FUTUREWAVE': RarityTypes.LEGENDARY,
+  'FUTUREWAVE': RarityTypes.EPIC,
   'CRYSTALBLUE': RarityTypes.LEGENDARY,
   'CRYSTALRED': RarityTypes.LEGENDARY,
   'MATTEBLACK': RarityTypes.LEGENDARY,
