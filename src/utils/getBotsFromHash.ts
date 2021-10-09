@@ -1,17 +1,14 @@
 import { BotType } from "../pages/RarityTool"
-import { botsJson, secondBotsJson } from "./bots"
-import { duplicates } from "./duplicate-bots"
+import { botsJson } from "./bots"
+import { wave3 } from "./updatedWave3"
 
 export const getBotsFromHash = (num: string) => {
   const botsArray: BotType[] = []
   if(botsJson[num]){
     botsArray.push(botsJson[num])
   }
-  if(duplicates[num]){
-    botsArray.push(duplicates[num])
-  }
-  if(secondBotsJson[num]){
-    botsArray.push(secondBotsJson[num])
+  if(wave3[num]){
+    botsArray.push(wave3[num])
   }
   return botsArray;
 }

@@ -58,7 +58,7 @@ const Application = () => {
         </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            {/* <Route exact path="/try-2-guess-this">
+            <Route exact path="/go-mint-4">
               <Home
                 candyMachineId={candyMachineId}
                 config={config}
@@ -77,7 +77,7 @@ const Application = () => {
                 treasury={treasury}
                 txTimeout={txTimeout}
               />
-            </Route> */}
+            </Route>
             {/* <Route exact path="/thank-you-mods">
               <ModsLink
                 candyMachineId={candyMachineId}
