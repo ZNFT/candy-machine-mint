@@ -162,13 +162,14 @@ export const getCandyMachineState = async (
   const provider = new anchor.Provider(connection, anchorWallet, {
     preflightCommitment: "recent",
   });
-
+  console.log('ancor', anchor)
   const idl = await anchor.Program.fetchIdl(
     CANDY_MACHINE_PROGRAM,
     provider
   );
 
   const program = new anchor.Program(idl, CANDY_MACHINE_PROGRAM, provider);
+  console.log('program', program)
   const candyMachine = {
     id: candyMachineId,
     connection,
@@ -176,6 +177,7 @@ export const getCandyMachineState = async (
   }
 
   const state: any = await program.account.candyMachine.fetch(candyMachineId);
+  console.log('price', state.data.price.toNumber())
   const itemsAvailable = state.data.itemsAvailable.toNumber();
   const itemsRedeemed = state.itemsRedeemed.toNumber();
   const itemsRemaining = itemsAvailable - itemsRedeemed;
