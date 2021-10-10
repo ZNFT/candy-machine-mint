@@ -98,4 +98,11 @@ export const rarityHashMap = {
   'CONCRETE JUNGLE': RarityTypes.UNKNOWN,
   'GARDEN': RarityTypes.UNKNOWN,
   'CRACKED': RarityTypes.UNKNOWN,
+  'DOUBLECHAMELEONDAO': RarityTypes.LEGENDARY,
+  'MONOCHROME':RarityTypes.LEGENDARY,
+  'NEAPOLITAN':RarityTypes.LEGENDARY,
+  'BONSAI':RarityTypes.LEGENDARY,
+  'DARKMODE':RarityTypes.LEGENDARY,
+  'INVERTED':RarityTypes.LEGENDARY,
+  'LIMBO':RarityTypes.LEGENDARY,
 }

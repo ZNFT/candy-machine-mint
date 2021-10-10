@@ -1,6 +1,7 @@
 import { BotType } from "../pages/RarityTool"
 import { botsJson } from "./bots"
 import { wave3 } from "./updatedWave3"
+import { wave4 } from "./wave4"
 
 export const getBotsFromHash = (num: string) => {
   const botsArray: BotType[] = []
@@ -9,6 +10,9 @@ export const getBotsFromHash = (num: string) => {
   }
   if(wave3[num]){
     botsArray.push(wave3[num])
+  }
+  if(wave4[num]){
+    botsArray.push(wave4[num])
   }
   return botsArray;
 }
