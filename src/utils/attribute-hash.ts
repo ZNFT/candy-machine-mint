@@ -37,8 +37,6 @@ export const rarityHashMap = {
   'WINKY': RarityTypes.RARE,
   'STARSTRUCK': RarityTypes.RARE,
   'GRILLS': RarityTypes.RARE,
-  'NONE ':RarityTypes.EPIC,
-  'NONE': RarityTypes.COMMON,
   'TRADITIONAL': RarityTypes.EPIC,
   'PLASMA': RarityTypes.RARE,
   'DAISY': RarityTypes.RARE,

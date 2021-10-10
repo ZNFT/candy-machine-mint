@@ -134,9 +134,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
               </div>
               <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
                 {bot ? getRarityString(rarity, category, traitName) : "?"}
-                {bot &&
-                  rarity !== "N/A" &&
-                  renderIcon(rarity, category, traitName)}
+                {bot && renderIcon(rarity, category, traitName)}
               </div>
             </div>
           );
