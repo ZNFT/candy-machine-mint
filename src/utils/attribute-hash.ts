@@ -105,4 +105,7 @@ export const rarityHashMap = {
   'DARKMODE':RarityTypes.LEGENDARY,
   'INVERTED':RarityTypes.LEGENDARY,
   'LIMBO':RarityTypes.LEGENDARY,
+  'BABYBOTBLOCKPARTY':RarityTypes.LEGENDARY,
+  'ECLIPSE':RarityTypes.LEGENDARY,
+  'THUNDERGODCHAMELEON':RarityTypes.LEGENDARY
 }
