@@ -107,5 +107,6 @@ export const rarityHashMap = {
   'LIMBO':RarityTypes.LEGENDARY,
   'BABYBOTBLOCKPARTY':RarityTypes.LEGENDARY,
   'ECLIPSE':RarityTypes.LEGENDARY,
-  'THUNDERGODCHAMELEON':RarityTypes.LEGENDARY
+  'THUNDERGODCHAMELEON':RarityTypes.LEGENDARY,
+  'CAT':RarityTypes.LEGENDARY,
 }
