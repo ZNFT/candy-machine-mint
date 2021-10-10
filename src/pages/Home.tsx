@@ -205,7 +205,7 @@ const Home = (props: HomeProps) => {
                 Mint an Irrelevant for 2 SOL
               </p>
               <p className="has-text-white">
-                INITIATE: WAVE 3<br />
+                INITIATE: WAVE 4<br />
                 {"{{ 606 // 4848 }} "}
               </p>
               <div className="content has-text-white mt-5 is-size-6">
@@ -223,7 +223,7 @@ const Home = (props: HomeProps) => {
                   rebellion to make their stand. Following their allies' trail,
                   they used strategy and stealth to try to best their opponents.
                   Heroes were made and memories of their triumphs inspired a
-                  third act — a series of events that neither robots or humans
+                  fourth act — a series of events that neither robots or humans
                   could comprehend."
                 </p>
                 <p className="mt-6 is-italic">This is the final wave.</p>
