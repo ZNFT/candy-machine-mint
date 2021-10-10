@@ -165,12 +165,14 @@ const Home = (props: HomeProps) => {
         signAllTransactions: wallet.signAllTransactions,
         signTransaction: wallet.signTransaction,
       } as anchor.Wallet;
-      const { candyMachine, itemsRemaining } = await getCandyMachineState(
-        anchorWallet,
-        props.candyMachineId,
-        props.connection
-      );
+      const { candyMachine, itemsRemaining, price } =
+        await getCandyMachineState(
+          anchorWallet,
+          props.candyMachineId,
+          props.connection
+        );
       console.log(itemsRemaining);
+      console.log("price", price);
       setCandyMachine(candyMachine);
       setItemsRemaining(itemsRemaining);
       setIsMinting(false);
