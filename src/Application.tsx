@@ -17,7 +17,6 @@ import {
 
 import "./Application.scss";
 import Presale from "./pages/Presale";
-import ModsLink from "./pages/ModsLink";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
 import TokenVerification from "./pages/TokenVerification";
