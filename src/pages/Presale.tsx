@@ -39,12 +39,12 @@ interface PresaleProps {
 }
 
 const Presale = (props: PresaleProps) => {
-  register_tab_GUID();
-  const threshold = 1;
+  // register_tab_GUID();
+  // const threshold = 1;
   const [itemsRemaining, setItemsRemaining] = useState<number | null>(null);
   const [isMinting, setIsMinting] = useState(false);
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
-  const presaleWaveId = wave + "p";
+  // const presaleWaveId = wave + "p";
 
   // FOR TESTING
   // const startDate = 1632809802316;
@@ -80,13 +80,13 @@ const Presale = (props: PresaleProps) => {
         );
 
         if (!status?.err) {
-          const lsItem = localStorage.getItem(presaleWaveId);
-          lsItem
-            ? localStorage.setItem(
-                presaleWaveId,
-                (parseInt(lsItem, 10) + 1).toString()
-              )
-            : localStorage.setItem(presaleWaveId, "1");
+          // const lsItem = localStorage.getItem(presaleWaveId);
+          // lsItem
+          //   ? localStorage.setItem(
+          //       presaleWaveId,
+          //       (parseInt(lsItem, 10) + 1).toString()
+          //     )
+          //   : localStorage.setItem(presaleWaveId, "1");
 
           setAlertState({
             open: true,
@@ -157,11 +157,15 @@ const Presale = (props: PresaleProps) => {
   const isSoldOut = itemsRemaining === 0;
   const mintPeriodOver = Date.now() - startDate > 60000;
 
-  const lsWave = localStorage.getItem(presaleWaveId);
-  const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
-  const isOverThreshold = mintSuccessTimes >= threshold;
-  const isActive = (Date.now() >= startDate || countdownComplete) && !isSoldOut;
-  const notActive = !isActive || isSoldOut || isOverThreshold;
+  // const lsWave = localStorage.getItem(presaleWaveId);
+  // const mintSuccessTimes = lsWave !== null ? +lsWave : 0;
+  // const isOverThreshold = mintSuccessTimes >= threshold;
+  const isActive =
+    (Date.now() >= startDate || countdownComplete) &&
+    !isSoldOut &&
+    wallet.publicKey?.toBase58() ===
+      "4y6WYFugnUDrrYkye1CMQ54xnjr23VRKG1t133843LdK";
+  const notActive = !isActive || isSoldOut;
   // const notActive = !isActive || isSoldOut;
 
   return (

@@ -58,8 +58,8 @@ const Application = () => {
         </Route>
         <ConnectionProvider endpoint={endpoint}>
           <WalletProvider wallets={wallets}>
-            <Route exact path="/wen-mint-4">
-              <Home
+            <Route exact path="/wagmi">
+              <Presale
                 candyMachineId={candyMachineId}
                 config={config}
                 connection={connection}
