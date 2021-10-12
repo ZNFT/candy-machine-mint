@@ -13,15 +13,15 @@ export const getBotsFromHash = (num: string) => {
     botsArray.push(wave4[num])
   }
 
-  const parsed = parseInt(num,10)
-  let pairedID = 0
-  if(!isNaN(parsed) && parsed > 1234 && parsed < 1842){
-    pairedID = parsed + 2323
-    botsArray.push(wave3[pairedID])
-  } else if(!isNaN(parsed) && parsed > 3557 && parsed < 4165){
-    pairedID = parsed - 2323
-    botsArray.push(botsJson[pairedID])
-  }
+  // const parsed = parseInt(num,10)
+  // let pairedID = 0
+  // if(!isNaN(parsed) && parsed > 1234 && parsed < 1842){
+  //   pairedID = parsed + 2323
+  //   botsArray.push(wave3[pairedID])
+  // } else if(!isNaN(parsed) && parsed > 3557 && parsed < 4165){
+  //   pairedID = parsed - 2323
+  //   botsArray.push(botsJson[pairedID])
+  // }
   return botsArray;
 }
 
