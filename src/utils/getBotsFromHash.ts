@@ -7,12 +7,20 @@ export const getBotsFromHash = (num: string) => {
   const botsArray: BotType[] = []
   if(botsJson[num]){
     botsArray.push(botsJson[num])
-  }
-  if(wave3[num]){
+  } else if(wave3[num]){
     botsArray.push(wave3[num])
-  }
-  if(wave4[num]){
+  } else if(wave4[num]){
     botsArray.push(wave4[num])
+  }
+
+  const parsed = parseInt(num,10)
+  let pairedID = 0
+  if(!isNaN(parsed) && parsed > 1234 && parsed < 1842){
+    pairedID = parsed + 2323
+    botsArray.push(wave3[pairedID])
+  } else if(!isNaN(parsed) && parsed > 3557 && parsed < 4165){
+    pairedID = parsed - 2323
+    botsArray.push(botsJson[pairedID])
   }
   return botsArray;
 }
