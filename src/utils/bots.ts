@@ -1775,7 +1775,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #441",
     },
     "442": {
-      "link": "https://arweave.net/g1ufUz23haIuFPovWbGkqoiS6EDLCmWQuXM-LWEoUzA",
+      "link": "https://arweave.net/d4ovEL5dmOE1-kuWQUyc2HMp-b1ydZeGpKDgEP257zw",
       "name": "Irrelevant #442",
     },
     "443": {
@@ -2364,7 +2364,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #588",
     },
     "589": {
-      "link": "https://arweave.net/seQhs0YXILS9rqjeppoeTRTKLRjchWprVfBTmcUOmyE",
+      "link": "https://arweave.net/Twrat0bbhsCmiLDWNHt_uBvZevREFsleJr1YGNTZQ4Y",
       "name": "Irrelevant #589",
     },
     "590": {
