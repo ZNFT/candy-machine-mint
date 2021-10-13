@@ -1338,7 +1338,7 @@ export const wave4: BotsKeyType = {
       "name": "Irrelevant #4496",
   },
   "4497": {
-      "link": "https://arweave.net/zs35fzjeN0Qg5xRFWAdnyoLg0IPyV2GWUzTc4aLGPjk",
+      "link": "https://arweave.net/NW_OW3a1DARh7jvpS-t1LSy7KVFTjQ-JT6LqpcAiKP4",
       "name": "Irrelevant #4497",
   },
   "4498": {
@@ -1946,7 +1946,7 @@ export const wave4: BotsKeyType = {
       "name": "Irrelevant #4648",
   },
   "4649": {
-      "link": "https://arweave.net/wqrTdDfEwHYkCm0EIJBge9RtAa3RQstwQCkq7qNQRfQ",
+      "link": "https://arweave.net/aB0Bde_VOvSfk3nsYL-yndxxmmUOI2PeIKqJDlyc2D8",
       "name": "Irrelevant #4649",
   },
   "4650": {

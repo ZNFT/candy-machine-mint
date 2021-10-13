@@ -70,7 +70,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #1857"
   },
   "1858": {
-    "link": "https://arweave.net/IvkImL3RkrLYyRik5-Z0Q5F3-EU4FtTfnkJZzVU2Wl0",
+    "link": "https://arweave.net/-UtxlnXsJxir0CslCZJE9-BEh9-Xss7-vSmyUZTqSLE",
     "name": "Irrelevant #1858"
   },
   "1859": {
@@ -258,7 +258,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #1904"
   },
   "1905": {
-    "link": "https://arweave.net/gDvZgbHLiRnBHnOZWuZQAeq31I4XXJDfg3WCeiH8wm0",
+    "link": "https://arweave.net/f0QJhQjmBS6FziGhLdb3UnH5Q7uKykldA6En-W5d778",
     "name": "Irrelevant #1905"
   },
   "1906": {
@@ -830,7 +830,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2047"
   },
   "2048": {
-    "link": "https://arweave.net/O1dBmPyBvjHwwjGRmfA1v9HZfGMRdRVJn16aWIvZ8SY",
+    "link": "https://arweave.net/_fwTTo47IKlAoR5L3dytp-trpUhtqKdJZD28UdKTxmo",
     "name": "Irrelevant #2048"
   },
   "2049": {
@@ -970,7 +970,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2082"
   },
   "2083": {
-    "link": "https://arweave.net/rrfQN5zt8A8d7ImGzPyleLuCB_HBTFuezPjYs_xHlq0",
+    "link": "https://arweave.net/iXNiG_GsDuajiRWtB5I9ZbPSf2_R-Gi1upA6pQlA0E0",
     "name": "Irrelevant #2083"
   },
   "2084": {
@@ -1062,7 +1062,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2105"
   },
   "2106": {
-    "link": "https://arweave.net/UYfBsMdMKlkBtX2_TWDx58k49kQmm2c5ogCSOIC-VKI",
+    "link": "https://arweave.net/TbvrcxXwEWODYYv37Avt5pQysQjIslIjQ0NMuG8D-s8",
     "name": "Irrelevant #2106"
   },
   "2107": {
@@ -1166,7 +1166,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2131"
   },
   "2132": {
-    "link": "https://arweave.net/jclnTi3-3j4v-qjk356AfTk8NLfzwK19Eokq0YSLvgU",
+    "link": "https://arweave.net/dtQpiZQV1c46tcfsDDzJ5UWWCmxzcgqeT_TXSJYFAh4",
     "name": "Irrelevant #2132"
   },
   "2133": {
@@ -1186,7 +1186,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2136"
   },
   "2137": {
-    "link": "https://arweave.net/NMSxpcdIgJpTuWvuXT6uxqbzM7Vo_U7cLBt6VYKA8Js",
+    "link": "https://arweave.net/So9fc6XR8QT-hyHvlJZm5e_R0uxvuCjrxV9O9Zri81s",
     "name": "Irrelevant #2137"
   },
   "2138": {
@@ -1458,7 +1458,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2204"
   },
   "2205": {
-    "link": "https://arweave.net/BAI6FHjW21ptZz3_ZKHXC0oC2sBiBQwR4kBnySbYabE",
+    "link": "https://arweave.net/FO-BPWFYz3hWqEJ4HvERiyYy_2QkHIHSj3BRqEhydm8",
     "name": "Irrelevant #2205"
   },
   "2206": {
@@ -1702,7 +1702,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2265"
   },
   "2266": {
-    "link": "https://arweave.net/ut0oarnDVW0LfP3xu-gT9h1xO6OIWSHo9UERPt_FWvI",
+    "link": "https://arweave.net/aN7eXfVQW-6wlhUYxeHB713i6qZalj3n51SVvbRPCGc",
     "name": "Irrelevant #2266"
   },
   "2267": {
@@ -2034,7 +2034,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2348"
   },
   "2349": {
-    "link": "https://arweave.net/4yxRSSLYftIQup47G5ZkvUq0bRctACaikX-2HRZ5S-0",
+    "link": "https://arweave.net/YsojZuVrziVRWumVAkav0_oGZyB87xGw4lf6gFwgVQk",
     "name": "Irrelevant #2349"
   },
   "2350": {
@@ -2094,7 +2094,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2363"
   },
   "2364": {
-    "link": "https://arweave.net/5OyUai2wlBfRigFcQoKqxv7LKJFx56thXCfpQZHzSKQ",
+    "link": "https://arweave.net/TcteQ1MCwnX8fexU2anLZJ9JuxkAX0FbTa_ORqrUbZc",
     "name": "Irrelevant #2364"
   },
   "2365": {
@@ -2302,7 +2302,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2415"
   },
   "2416": {
-    "link": "https://arweave.net/aEOYF4lVvzNn8S9wWHVrmPoJJ8ZMMLU-HAiy88RE2RI",
+    "link": "https://arweave.net/zcU6_-H0NbSfnAZ5pbRtJ5b7RlnKrVVaJXC6RAthdtE",
     "name": "Irrelevant #2416"
   },
   "2417": {
@@ -2382,7 +2382,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2435"
   },
   "2436": {
-    "link": "https://arweave.net/1yNMrI8t8q2SUK9QCbU7qhA6IMmyTnyxqRRlNmwV9pc",
+    "link": "https://arweave.net/TXrdsh5rDwOSyK_lgAKXO06Fj2iDTQNp0Zd4XAIXtJA",
     "name": "Irrelevant #2436"
   },
   "2437": {
@@ -2678,7 +2678,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2509"
   },
   "2510": {
-    "link": "https://arweave.net/KS_bDVTEYm0gdWN3AGw1hC-hTsl8HV4r3f92Z_MZXVY",
+    "link": "https://arweave.net/gFSiDWIQ60RxaRTsU9sa7F0iJzsAbyWSO5fN1HOTs3o",
     "name": "Irrelevant #2510"
   },
   "2511": {
@@ -3042,7 +3042,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2600"
   },
   "2601": {
-    "link": "https://arweave.net/8HCZNmjFuRW7zItAOY2ibxu1PSWe-nCe-7mQ7sDZdHs",
+    "link": "https://arweave.net/CprlK-nKWWjuZc4OpMX3uBI9Bt3p1Tnt-bbKNwmdEak",
     "name": "Irrelevant #2601"
   },
   "2602": {
@@ -3342,7 +3342,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2675"
   },
   "2676": {
-    "link": "https://arweave.net/KyhEN9iT3U_Mq4LRev8u9_XsjWktU_fOHjAYrJT52Ic",
+    "link": "https://arweave.net/uCG3djBVaCnOWov8P1y-cBNIrNW9QjivsHD1YSJTJgY",
     "name": "Irrelevant #2676"
   },
   "2677": {
@@ -3674,7 +3674,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2758"
   },
   "2759": {
-    "link": "https://arweave.net/2BVf3TgaJU06zzbdWlG58mJtL1EN2WN8eW5YGsXmF7I",
+    "link": "https://arweave.net/3Td6SQ2GyPAaZ5aR2ta0-u9Zv2kU1mjgUpZMITQeJT4",
     "name": "Irrelevant #2759"
   },
   "2760": {
@@ -4034,7 +4034,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2848"
   },
   "2849": {
-    "link": "https://arweave.net/2GokyLE5Q5TB8u3zT-9P9nS2ND18gcNBMA-4t8642Vc",
+    "link": "https://arweave.net/68jbgmtyTo1Ro5BFMfYcRgrUoS1ooiGk_uBTBY5gqxk",
     "name": "Irrelevant #2849"
   },
   "2850": {
@@ -4198,7 +4198,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2889"
   },
   "2890": {
-    "link": "https://arweave.net/FzwwghfWw0a3m6jo2iPncPvTLvwNqeuy_Xc8daKZk9k",
+    "link": "https://arweave.net/JGz8tUa7dYUswFaioBKUsA-F1Rc1PkGQMlIJvAuwiB0",
     "name": "Irrelevant #2890"
   },
   "2891": {
@@ -4222,7 +4222,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #2895"
   },
   "2896": {
-    "link": "https://arweave.net/vo1_J9mZRlrJ-9tXERkAYnvS64QXHqfW6XkdBxT9rBY",
+    "link": "https://arweave.net/zqxOHTPqC4FMu2hbFECXD7HCXI9eC4ESVckvfdrpBKA",
     "name": "Irrelevant #2896"
   },
   "2897": {
@@ -4798,7 +4798,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3039"
   },
   "3040": {
-    "link": "https://arweave.net/naHwyOvFEePw0AFO_58yOGHKf0wBuf-mZVhAQPtZXxw",
+    "link": "https://arweave.net/WZbrpmddyT75kddnEekGxJGSLyYDhVKBwIKA_VqKE6Y",
     "name": "Irrelevant #3040"
   },
   "3041": {
@@ -4942,7 +4942,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3075"
   },
   "3076": {
-    "link": "https://arweave.net/WZb9a2OQR1MafjP24XENxnekuGt3Q8Eu7Ud3JuwnKj0",
+    "link": "https://arweave.net/CFpbftGMP-fSkQ-9NDpS8CUtmmfGEBISWlQgYK0W-KQ",
     "name": "Irrelevant #3076"
   },
   "3077": {
@@ -5258,7 +5258,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3154"
   },
   "3155": {
-    "link": "https://arweave.net/vi2MKEsSdTIpQd_104sMWmN21lxobpoh1Pbk-OuWY2c",
+    "link": "https://arweave.net/gvUc6yuIUuxWEEdWig4fpfTuUCWHVpx18o8_8fHyv_4",
     "name": "Irrelevant #3155"
   },
   "3156": {
@@ -5510,7 +5510,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3217"
   },
   "3218": {
-    "link": "https://arweave.net/V0JTq9XxVP3jCK85iwFd6u6LIqbVhuBjXYE2yy-GzP4",
+    "link": "https://arweave.net/Yshu5CcTgdhgs0SDIPWLmm3O0OHHZFGW9IyA5QoyIgQ",
     "name": "Irrelevant #3218"
   },
   "3219": {
@@ -5658,7 +5658,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3254"
   },
   "3255": {
-    "link": "https://arweave.net/HI51q-lG-iZhAIZ9kIF8I1ONu9SxB3rQHCM7qaxO5Io",
+    "link": "https://arweave.net/A5pYdROvwL0xvkcV7VRKN5hEFA-h7-HDfcZaJR7_PGo",
     "name": "Irrelevant #3255"
   },
   "3256": {
@@ -6102,7 +6102,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3365"
   },
   "3366": {
-    "link": "https://arweave.net/IkUpvZ09E4tCg8dhYdn3gUL5VCWCl6E2bcrQQ3BE5mo",
+    "link": "https://arweave.net/JnQlGJ3DpZMl3ogBYXxkjTGvjstl0ColEcVkvHjE7I0",
     "name": "Irrelevant #3366"
   },
   "3367": {
@@ -6162,11 +6162,11 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3380"
   },
   "3381": {
-    "link": "https://arweave.net/fZPj9-67eXtJbogjEOfeXMY59Eeqg0qIDMmX-JdQ58A",
+    "link": "https://arweave.net/tKEYtiTcTVsK1Xtlkqo8FeNXA9Vi2K63H6a3zTdkabs",
     "name": "Irrelevant #3381"
   },
   "3382": {
-    "link": "https://arweave.net/GfRc-ZdP2fflS4ZbmvI7Cp6-lBGOqdXmiby7DaLhutA",
+    "link": "https://arweave.net/1rln8t_kz2UDHzd8ontL5vnSqqvMTra9B-D7gpI7ARA",
     "name": "Irrelevant #3382"
   },
   "3383": {
@@ -6474,7 +6474,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3458"
   },
   "3459": {
-    "link": "https://arweave.net/UHZ4-6QZ6CKKyGpweRRI4Ret396aRBc-0S4COjEcZUk",
+    "link": "https://arweave.net/oM286DNZxa9HRd2y3bhfmuIVyuJ_8gfCXs7oB1GATPk",
     "name": "Irrelevant #3459"
   },
   "3460": {
@@ -7522,7 +7522,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3720"
   },
   "3721": {
-    "link": "https://arweave.net/FyoSu8Y3PCPWEozjRBYdp5uOvf1jPa2PrIj8HmR3glc",
+    "link": "https://arweave.net/AHO_J13PZgbcOnPbu_jvFYiJ56shsZi_6rG3kJLgQCY",
     "name": "Irrelevant #3721"
   },
   "3722": {
@@ -7598,7 +7598,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3739"
   },
   "3740": {
-    "link": "https://arweave.net/lV-eZh7wWtwUxAcR4SKbKfZu2EDOfxisNzM-OA45LeA",
+    "link": "https://arweave.net/NYBaeS-X8xDXFvKJgw0q_sT79M297vbdl9233irpfTg",
     "name": "Irrelevant #3740"
   },
   "3741": {
@@ -7770,7 +7770,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3782"
   },
   "3783": {
-    "link": "https://arweave.net/5FW5fjGdlEPkhyHxDf46tD7_NkylhGUejK9YCQ6w_qs",
+    "link": "https://arweave.net/ED1iQBl_ta-Fb2fh8G3OOzG-8ynHIhpR8fjGpHMAbmw",
     "name": "Irrelevant #3783"
   },
   "3784": {
@@ -7790,7 +7790,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3787"
   },
   "3788": {
-    "link": "https://arweave.net/fupzss6UpTkTZbS8DLhXxmxv1hG9vo-T15k59uSai-4",
+    "link": "https://arweave.net/whz-SQrJxEp9nSBHVCB0oejyAL2IPTCqRVDeODiQ27g",
     "name": "Irrelevant #3788"
   },
   "3789": {
@@ -8322,7 +8322,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3920"
   },
   "3921": {
-    "link": "https://arweave.net/M197OOM-pStexP5XPZXhfxDFZcz0KnfX2IwzIjCLZY8",
+    "link": "https://arweave.net/cUEV0k2_Esfq2hkxFUYUpGsRIVDB2EaYbrLSvq0q8xo",
     "name": "Irrelevant #3921"
   },
   "3922": {
@@ -8338,7 +8338,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3924"
   },
   "3925": {
-    "link": "https://arweave.net/e_AIV27YqeeKvnrPZMcSWiyAHxMPzjD9HK1A5It8I6Q",
+    "link": "https://arweave.net/dPNNwySZ8QEejrGrqLk6FVoqFKDu3Ky4P2kqr-vtiiY",
     "name": "Irrelevant #3925"
   },
   "3926": {
@@ -8358,7 +8358,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3929"
   },
   "3930": {
-    "link": "https://arweave.net/V9LUKbpKswHF-9jshMsSu4ytBG-Xi2MLeX9O-Vuv2TY",
+    "link": "https://arweave.net/rWAfz1QZqU4Jm_qp1cUQdD-8E2vlEbgsUyAND2_HWXs",
     "name": "Irrelevant #3930"
   },
   "3931": {
@@ -8470,7 +8470,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #3957"
   },
   "3958": {
-    "link": "https://arweave.net/mngT2RR8WqYwxRFtinJFWI0EuZIaOL6XPQboOfHURT4",
+    "link": "https://arweave.net/sNWWCVgBOCCJe1ltDn4qP9tBZurD0yOP4TNBhKD7hkQ",
     "name": "Irrelevant #3958"
   },
   "3959": {
@@ -8666,7 +8666,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #4006"
   },
   "4007": {
-    "link": "https://arweave.net/-TIafvqlOafqbV32uQMoYaAp00Hq_pxyq1G_ecAvV8Y",
+    "link": "https://arweave.net/00riEZbBnWQ9ybcCMtUnOpxkUITOsrELe7rUOc1l6Rc",
     "name": "Irrelevant #4007"
   },
   "4008": {
@@ -8730,7 +8730,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #4022"
   },
   "4023": {
-    "link": "https://arweave.net/NEUX_6U7o_geV8dhmy2VGtOCCGsw7NsyoXOKZvomgLw",
+    "link": "https://arweave.net/byNtO9zU-HwPa3usoDaJZNeyiTKYSehh49vxrwcvvm4",
     "name": "Irrelevant #4023"
   },
   "4024": {
@@ -9022,7 +9022,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #4095"
   },
   "4096": {
-    "link": "https://arweave.net/dcmNqau8fAeGPN6naGDTfQjOcsTTzIDmpOb8HeNm0kw",
+    "link": "https://arweave.net/L_WbtgYOJVmT7zp8-miEwNmAix_tmjVEHw5ybTSymqs",
     "name": "Irrelevant #4096"
   },
   "4097": {
@@ -9114,7 +9114,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #4118"
   },
   "4119": {
-    "link": "https://arweave.net/SP_FGbhgeDjZ4n-myTGwzht4hZL9ZWcMIx1raeCC1Co",
+    "link": "https://arweave.net/02b-TT_SJ7r1Bh1-XkOF2SiYKK5S3eDZozRE5ydMWoE",
     "name": "Irrelevant #4119"
   },
   "4120": {
@@ -9166,7 +9166,7 @@ export const wave3: BotsKeyType = {
     "name": "Irrelevant #4131"
   },
   "4132": {
-    "link": "https://arweave.net/-iOWadQRmsiaQOxvFgW78inQXkezxUQR3DpcsxEkPlY",
+    "link": "https://arweave.net/TqiqjVJuZIBjdqleiCjlUXNOnvZWBjF-thiIui-AP5E",
     "name": "Irrelevant #4132"
   },
   "4133": {
