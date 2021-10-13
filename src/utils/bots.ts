@@ -119,7 +119,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #27",
     },
     "28": {
-      "link": "https://arweave.net/Xh-tsPNr4wLdfuhvrDU24E5C6SYDUTxlS3blVjO6SwM",
+      "link": "https://arweave.net/_1veOSg2cIyzyJ0yz-HT8NaFBWk9Ev8OcDJejKW0aAE",
       "name": "Irrelevant #28",
     },
     "29": {
@@ -135,7 +135,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #31",
     },
     "32": {
-      "link": "https://arweave.net/fqEw7jXpP0BXYOUVBT1bzPC8yS2xBbd-IZhoZ_oBhBo",
+      "link": "https://arweave.net/KPmHILUlacB12z2xFDppf58iVAYMa59oOOu-esL1SkA",
       "name": "Irrelevant #32",
     },
     "33": {
@@ -311,7 +311,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #75",
     },
     "76": {
-      "link": "https://arweave.net/KTTHBdiJ4jtsZ9NHleMYgErHVnVANZAAz7SNAHR7JkE",
+      "link": "https://arweave.net/Vl0GUD6CC0oxW55m4TVZPNBrY8SRRnN3LVEUvQIOw0Y",
       "name": "Irrelevant #76",
     },
     "77": {
@@ -455,7 +455,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #111",
     },
     "112": {
-      "link": "https://arweave.net/D1abUoMn603gVLa3KCQx-MVo0ym79o9zsi5pWx7wFj4",
+      "link": "https://arweave.net/ViK9Pyh9uRKyNi-dqcKUq0hVi-hAL1FMlNTz0qUSiPk",
       "name": "Irrelevant #112",
     },
     "113": {
@@ -743,7 +743,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #183",
     },
     "184": {
-      "link": "https://arweave.net/0VIe6Y2rdTDTy9NP1Kf5B2F3PvDY2PXDneBJMShN5-Y",
+      "link": "https://arweave.net/A1cR9ZuJ0Chgpa33b47Fc-Bl4IT3mfZgTsJGCGCmtPU",
       "name": "Irrelevant #184",
     },
     "185": {
@@ -827,7 +827,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #204",
     },
     "205": {
-      "link": "https://arweave.net/VQ6A9IDHDhn-xQVwH7t3oBy760wOqE90lHWuGnfCgMc",
+      "link": "https://arweave.net/FdPRDekYtmxRwYW6vk8NTk899hCYIZ3ZXaqHepUU77g",
       "name": "Irrelevant #205",
     },
     "206": {
@@ -923,7 +923,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #228",
     },
     "229": {
-      "link": "https://arweave.net/vFANyRSG8TK_7NsNovwXL8HCeINQ1awoEml7jp79Umw",
+      "link": "https://arweave.net/JezhHaQPmUEN8riKGdZVzSQFLRkwXHXUOZqpykU6eY0",
       "name": "Irrelevant #229",
     },
     "230": {
@@ -971,7 +971,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #240",
     },
     "241": {
-      "link": "https://arweave.net/kN3uduZjmDmvfpjGti0J79DpwRvZaQ8KHcTo7GygRhc",
+      "link": "https://arweave.net/TPPQZ_ZqRC9V_wJVOXu7ZyOeFRwKodX1fUmu13Yjqz4",
       "name": "Irrelevant #241",
     },
     "242": {
@@ -1251,7 +1251,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #310",
     },
     "311": {
-      "link": "https://arweave.net/dsYAWOe11ASZYhBXDq7j1Nc1W3sZbt6ZIKjGS6aIIWM",
+      "link": "https://arweave.net/bLgz5QWGkYaTX_FZXFDjwCW7LVOLK06P4zmqanKQX64",
       "name": "Irrelevant #311",
     },
     "312": {
@@ -2188,7 +2188,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #544",
     },
     "545": {
-      "link": "https://arweave.net/o4lVL_TikloIb5b0_SznY_s-UGS2kzuhgj4xZA2AtWQ",
+      "link": "https://arweave.net/Zt5AjCHi2kv95P7kQgV6GPz6VxRpnzcLx7jqIv-LtUI",
       "name": "Irrelevant #545",
     },
     "546": {
@@ -2232,7 +2232,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #555",
     },
     "556": {
-      "link": "https://arweave.net/WmtsVl6fQ96oSYzHMRNln0GyLLS6pmflza99pfN3xQ4",
+      "link": "https://arweave.net/Bj_CPh2nC9V-gBi_AqC5f0v7tlPF1fVLnzlIy4eFyNo",
       "name": "Irrelevant #556",
     },
     "557": {
@@ -2400,7 +2400,7 @@ export const botsJson: BotsKeyType = {
       "name": "Irrelevant #597",
     },
     "598": {
-      "link": "https://arweave.net/i1hNcrD01B_uE1b5_oCfC8yv6ousjQejkQAz78BvKo0",
+      "link": "https://arweave.net/DmraK87uTJde9kpx73wdaEktW4RO8Dn15x_BUl_2-yY",
       "name": "Irrelevant #598",
     },
     "599": {
