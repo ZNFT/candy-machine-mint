@@ -122,6 +122,10 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
+          console.log("matching category", matchingCategory, category);
+          if (category === "Accolades" && !matchingCategory) {
+            return null;
+          }
           const traitName =
             cleanTraitName(matchingCategory?.value, category) || "";
           let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
