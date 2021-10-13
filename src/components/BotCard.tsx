@@ -98,6 +98,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
       "Equipment",
       "Damage",
       "Expression",
+      "Accolades",
     ];
     if (!bot) {
       categories.map((category) => (
