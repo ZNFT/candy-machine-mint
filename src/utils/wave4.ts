@@ -1,10 +1,6 @@
 import { BotsKeyType } from "../pages/RarityTool";
 
 export const wave4: BotsKeyType = {
-  "4163": {
-      "link": "https://arweave.net/zmoVM9vhivdabkklfmlbgO8e6H3qkDQ3KRWoWo59k0g",
-      "name": "Cardboard Box",
-  },
   "4164": {
       "link": "https://arweave.net/VlTLgUIVY-is6h0Bs9zXOVatjC2lGsCMZkSPhB76wxk",
       "name": "Irrelevant #4164",

@@ -40,7 +40,6 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     axios
       .get(link)
       .then((response) => {
-        console.log("data", response.data);
         setBot(response.data);
         setLoading(false);
       })
@@ -122,7 +121,6 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
-          console.log("matching category", matchingCategory, category);
           if (category === "Accolades" && !matchingCategory) {
             return null;
           }
