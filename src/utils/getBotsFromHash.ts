@@ -1,5 +1,6 @@
 import { BotType } from "../pages/RarityTool"
 import { botsJson } from "./bots"
+import { wave2Hash, wave3Hash } from "./paired-bots"
 import { wave3 } from "./updatedWave3"
 import { wave4 } from "./wave4"
 
@@ -13,15 +14,11 @@ export const getBotsFromHash = (num: string) => {
     botsArray.push(wave4[num])
   }
 
-  // const parsed = parseInt(num,10)
-  // let pairedID = 0
-  // if(!isNaN(parsed) && parsed > 1234 && parsed < 1842){
-  //   pairedID = parsed + 2323
-  //   botsArray.push(wave3[pairedID])
-  // } else if(!isNaN(parsed) && parsed > 3557 && parsed < 4165){
-  //   pairedID = parsed - 2323
-  //   botsArray.push(botsJson[pairedID])
-  // }
+  if(wave2Hash[num]){
+    botsArray.push(wave3[wave2Hash[num]])
+  } else if(wave3Hash[num]){
+    botsArray.push(botsJson[wave3Hash[num]])
+  }
   return botsArray;
 }
 

@@ -40,7 +40,6 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     axios
       .get(link)
       .then((response) => {
-        console.log("data", response.data);
         setBot(response.data);
         setLoading(false);
       })
