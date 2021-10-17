@@ -2,20 +2,11 @@ import { Icon, IconSize, Position, Toaster } from "@blueprintjs/core";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useState } from "react";
 import Header from "../components/Header";
-import { getBotsFromHash } from "../utils/getBotsFromHash";
+import { BotDataType, getBotsFromHash } from "../utils/getBotsFromHash";
 import ratchetRick from "../images/ratchet-rick.png";
 import lightning from "../images/lightning.png";
 import "./RarityTool.scss";
 import BotCard from "../components/BotCard";
-
-export type BotType = {
-  link: string;
-  name: string;
-};
-
-export type BotsKeyType = {
-  [key: string]: BotType;
-};
 
 export const AppToaster = Toaster.create({
   className: "ricky-toaster",
@@ -24,7 +15,7 @@ export const AppToaster = Toaster.create({
 
 const RarityTool = () => {
   const [query, setQuery] = useState("");
-  const [botsArray, setBots] = useState<BotType[]>([]);
+  const [botsArray, setBots] = useState<BotDataType[]>([]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceLoadData = useCallback(debounce(getBotUrls, 1000), []);
@@ -34,7 +25,7 @@ const RarityTool = () => {
   }, [query, debounceLoadData]);
 
   function getBotUrls(id: string) {
-    const totalBots = getBotsFromHash(id).slice(0, 2);
+    const totalBots: BotDataType[] = getBotsFromHash(id);
     if ((!id || totalBots.length === 0) && id !== "") {
       showToast(1);
       return;
@@ -125,7 +116,7 @@ const RarityTool = () => {
               />
             </div>
           </div>
-          {botsArray.map((bot: BotType, index: number) => (
+          {botsArray.map((bot: BotDataType, index: number) => (
             <BotCard key={index} bot={bot} />
           ))}
         </div>
