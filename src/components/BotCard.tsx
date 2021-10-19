@@ -3,6 +3,7 @@ import cx from "classnames";
 import { find, get } from "lodash";
 import { BotDataType } from "../utils/getBotsFromHash";
 import { cleanTraitName } from "../utils/cleanTraitName";
+import { rarityRankings } from "../utils/rarity-rankings";
 
 type Props = {
   bot: BotDataType;
@@ -95,6 +96,7 @@ const BotCard = ({ bot }: Props) => {
     );
   };
 
+  const botNum = bot && bot.name.split("#")[1];
   return (
     <div className="bot-card flex my-4">
       <div className="mr-4">
@@ -103,6 +105,7 @@ const BotCard = ({ bot }: Props) => {
           <div>
             <div>{bot?.gen}</div>
             <div>{bot?.name}</div>
+            <div>Ranking: #{rarityRankings[botNum]}</div>
           </div>
         </div>
       </div>
