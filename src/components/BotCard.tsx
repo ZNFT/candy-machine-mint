@@ -1,52 +1,14 @@
-import { Spinner, SpinnerSize } from "@blueprintjs/core";
-import { useState } from "react";
-import axios from "axios";
-import { BotType } from "../pages/RarityTool";
-import { useEffect } from "react";
 import { rarityHashMap, RarityTypes } from "../utils/attribute-hash";
 import cx from "classnames";
 import { find, get } from "lodash";
-import { getWaveName } from "../utils/getBotsFromHash";
+import { BotDataType } from "../utils/getBotsFromHash";
 import { cleanTraitName } from "../utils/cleanTraitName";
 
 type Props = {
-  bot: BotType;
+  bot: BotDataType;
 };
 
-type BotDataType = {
-  name: string;
-  attributes: {
-    trait_type: string;
-    value: string;
-  }[];
-  image: string;
-  collection: {
-    name: string;
-  };
-};
-
-const BotCard = ({ bot: { link, name } }: Props) => {
-  const [loading, setLoading] = useState<boolean>(false);
-  const [bot, setBot] = useState<BotDataType | null>(null);
-
-  useEffect(() => {
-    if (link) {
-      fetchBot(link);
-    }
-  }, [link]);
-
-  const fetchBot = (link: string) => {
-    setLoading(true);
-    axios
-      .get(link)
-      .then((response) => {
-        console.log("data", response.data);
-        setBot(response.data);
-        setLoading(false);
-      })
-      .catch((err) => console.log(err));
-  };
-
+const BotCard = ({ bot }: Props) => {
   const getRarityString = (
     rarity: string,
     category: string,
@@ -91,7 +53,7 @@ const BotCard = ({ bot: { link, name } }: Props) => {
     return <div className={classname} />;
   };
 
-  const renderTraits = (bot: BotDataType | null) => {
+  const renderTraits = () => {
     const categories = [
       "Backgrounds",
       "Body",
@@ -100,21 +62,6 @@ const BotCard = ({ bot: { link, name } }: Props) => {
       "Expression",
       "Accolades",
     ];
-    if (!bot) {
-      categories.map((category) => (
-        <div key={category} className="flex uppercase">
-          <div className="text-white text-center rarity-tool__trait rarity-tool__trait--background rarity-tool__trait--bordered">
-            {category === "Backgrounds" ? "Background" : category}
-          </div>
-          <div className="rarity-tool__trait bg-gray-300 text-black text-center rarity-tool__trait--borderless">
-            ?
-          </div>
-          <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
-            ?
-          </div>
-        </div>
-      ));
-    }
     return (
       <div>
         {categories.map((category, index) => {
@@ -122,12 +69,12 @@ const BotCard = ({ bot: { link, name } }: Props) => {
             bot?.attributes,
             (trait) => trait.trait_type === category
           );
-          console.log("matching category", matchingCategory, category);
+          const traitName =
+            cleanTraitName(matchingCategory?.value, category) || "";
           if (category === "Accolades" && !matchingCategory) {
             return null;
           }
-          const traitName =
-            cleanTraitName(matchingCategory?.value, category) || "";
+
           let rarity = get(rarityHashMap, [`${traitName}`], "N/A");
           return (
             <div key={index} className="tracking-widest flex uppercase">
@@ -135,11 +82,11 @@ const BotCard = ({ bot: { link, name } }: Props) => {
                 {category === "Backgrounds" ? "Background" : category}
               </div>
               <div className="rarity-tool__trait bg-gray-300 text-black text-center rarity-tool__trait--borderless">
-                {bot ? traitName : "?"}
+                {traitName}
               </div>
               <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
-                {bot ? getRarityString(rarity, category, traitName) : "?"}
-                {bot && renderIcon(rarity, category, traitName)}
+                {getRarityString(rarity, category, traitName)}
+                {renderIcon(rarity, category, traitName)}
               </div>
             </div>
           );
@@ -151,36 +98,15 @@ const BotCard = ({ bot: { link, name } }: Props) => {
   return (
     <div className="bot-card flex my-4">
       <div className="mr-4">
-        {loading && (
-          <div className="rarity-tool__placeholder-img">
-            <div className="flex content-center h-full justify-center">
-              {loading && <Spinner size={SpinnerSize.LARGE} />}
-            </div>
+        <img className="rarity-tool__bot-image" alt="bot-pfp" src={bot?.img} />
+        <div className="rarity-tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
+          <div>
+            <div>{bot?.gen}</div>
+            <div>{bot?.name}</div>
           </div>
-        )}
-        {!loading && (
-          <>
-            {bot ? (
-              <img
-                className="rarity-tool__bot-image"
-                alt="bot-pfp"
-                src={bot.image}
-              />
-            ) : (
-              <div className="rarity-tool__placeholder-img bg-gray-300"></div>
-            )}
-          </>
-        )}
-        {bot && (
-          <div className="rarity-tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
-            <div>
-              <div>{getWaveName(bot.collection.name)}</div>
-              <div>{bot.name}</div>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
-      {renderTraits(bot)}
+      {renderTraits()}
     </div>
   );
 };

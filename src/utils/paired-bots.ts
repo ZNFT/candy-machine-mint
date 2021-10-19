@@ -1,9 +1,4 @@
-import { BotsKeyType } from "../pages/RarityTool";
-
-export const wave3Hash = {
-    "1841": "1841",
-    "1842": "1842",
-    "1843": "1843",
+export const wave3Hash: {[key: string]: string} = {
     "3558": "1235",
     "3559": "1244",
     "3560": "1334",
@@ -612,7 +607,7 @@ export const wave3Hash = {
     "4163": "1333"
 }
 
-export const wave2Hash = {
+export const wave2Hash: {[key: string]: string} = {
     "1235": "3558",
     "1236": "3669",
     "1237": "3780",
@@ -1219,7 +1214,4 @@ export const wave2Hash = {
     "1838": "4119",
     "1839": "4120",
     "1840": "4121",
-    "1841": "1841",
-    "1842": "1842",
-    "1843": "1843"
 }
