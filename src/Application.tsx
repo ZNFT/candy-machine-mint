@@ -44,8 +44,8 @@ const Application = () => {
     []
   );
   return (
-    <Router history={customHistory}>
-      <div className="app">
+    <div className="app">
+      <Router history={customHistory}>
         <Route exact path="/rarity">
           <RarityTool />
         </Route>
@@ -64,8 +64,8 @@ const Application = () => {
           </WalletProvider>
         </ConnectionProvider>
         <Route exact path="/" component={DomainHomePage} />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 };
 
