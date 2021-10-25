@@ -18,7 +18,7 @@ export type BotsDataType = {
   [key: string]: BotDataType
 }
 
-export const getBotsFromHash = (num: string) => {
+export const getBotsFromHash = (num: string, getOnlyRanking?: boolean) => {
   const arr = []
   if(wave1[num]){
     arr.push(wave1[num])
@@ -31,6 +31,10 @@ export const getBotsFromHash = (num: string) => {
   }
   else if(wave4[num]){
     arr.push(wave4[num])
+  }
+
+  if(getOnlyRanking){
+    return arr
   }
 
   if(wave2Hash[num]){
