@@ -17,11 +17,8 @@ import {
 import cx from "classnames";
 import logo from "../images/logo.png";
 import vendingMachine from "../images/vending-machine.png";
-
 import { countdownRenderer } from "./Home";
-import { wave } from "../Application";
 import Header from "../components/Header";
-import { register_tab_GUID } from "../utils/one-browser";
 
 interface AlertState {
   open: boolean;

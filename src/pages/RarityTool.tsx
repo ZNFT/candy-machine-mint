@@ -7,7 +7,6 @@ import ratchetRick from "../images/ratchet-rick.png";
 import lightning from "../images/lightning.png";
 import "./RarityTool.scss";
 import BotCard from "../components/BotCard";
-import { botRankings } from "../utils/bot-rankings";
 import { rarityRankings } from "../utils/rarity-rankings";
 
 export const AppToaster = Toaster.create({
