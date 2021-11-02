@@ -3,12 +3,31 @@ import cx from "classnames";
 import { find, get } from "lodash";
 import { BotDataType } from "../utils/getBotsFromHash";
 import { cleanTraitName } from "../utils/cleanTraitName";
+import { botRankings } from "../utils/bot-rankings";
 
 type Props = {
-  bot: BotDataType;
+  bot: BotDataType | null;
 };
 
 const BotCard = ({ bot }: Props) => {
+  const emptyBotCard = () => {
+    return (
+      <div className="bot-card flex my-4">
+        <div className="mr-4">
+          <div className="rarity-tool__bot-image rarity-tool__bot-image--empty flex items-center justify-center text-5xl">
+            ?
+          </div>
+          <div className="rarity-tool__bot-name mt-3 uppercase text-center border-black border-4 border-solid bg-white flex items-center justify-center">
+            <div>
+              <div>Irrelevant #</div>
+            </div>
+          </div>
+        </div>
+        {renderTraits(null)}
+      </div>
+    );
+  };
+
   const getRarityString = (
     rarity: string,
     category: string,
@@ -53,7 +72,7 @@ const BotCard = ({ bot }: Props) => {
     return <div className={classname} />;
   };
 
-  const renderTraits = () => {
+  const renderTraits = (state?: null) => {
     const categories = [
       "Backgrounds",
       "Body",
@@ -81,12 +100,18 @@ const BotCard = ({ bot }: Props) => {
               <div className="text-white text-center rarity-tool__trait rarity-tool__trait--background rarity-tool__trait--bordered">
                 {category === "Backgrounds" ? "Background" : category}
               </div>
-              <div className="rarity-tool__trait bg-gray-300 text-black text-center rarity-tool__trait--borderless">
-                {traitName}
+              <div className="rarity-tool__trait bg-white text-black text-center rarity-tool__trait--borderless">
+                {state === null ? "? ? ?" : traitName}
               </div>
               <div className="bg-white text-black text-center rarity-tool__trait rarity-tool__trait--bordered">
-                {getRarityString(rarity, category, traitName)}
-                {renderIcon(rarity, category, traitName)}
+                {state === null ? (
+                  "? ? ?"
+                ) : (
+                  <>
+                    {getRarityString(rarity, category, traitName)}
+                    {renderIcon(rarity, category, traitName)}
+                  </>
+                )}
               </div>
             </div>
           );
@@ -95,6 +120,11 @@ const BotCard = ({ bot }: Props) => {
     );
   };
 
+  if (bot === null) {
+    return emptyBotCard();
+  }
+
+  const botNum = bot && bot.name.split("#")[1];
   return (
     <div className="bot-card flex my-4">
       <div className="mr-4">
@@ -103,6 +133,7 @@ const BotCard = ({ bot }: Props) => {
           <div>
             <div>{bot?.gen}</div>
             <div>{bot?.name}</div>
+            <div>Ranking: #{botRankings[botNum]}</div>
           </div>
         </div>
       </div>

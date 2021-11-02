@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import Home from "./pages/Home";
 import { createBrowserHistory } from "history";
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -19,7 +18,6 @@ import "./Application.scss";
 import Presale from "./pages/Presale";
 import DomainHomePage from "./pages/DomainHomePage";
 import RarityTool from "./pages/RarityTool";
-import TokenVerification from "./pages/TokenVerification";
 
 const treasury = new anchor.web3.PublicKey(
   process.env.REACT_APP_TREASURY_ADDRESS!
@@ -34,10 +32,6 @@ const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork;
 const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!;
 const connection = new anchor.web3.Connection(rpcHost);
 const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
-const presaleStartDateSeed = parseInt(
-  process.env.REACT_APP_CANDY_START_DATE_PRESALE!,
-  10
-);
 const txTimeout = 50000; // milliseconds (confirm this works for your project)
 
 export const wave = 3;
@@ -50,8 +44,8 @@ const Application = () => {
     []
   );
   return (
-    <Router history={customHistory}>
-      <div className="app">
+    <div className="app">
+      <Router history={customHistory}>
         <Route exact path="/rarity">
           <RarityTool />
         </Route>
@@ -67,14 +61,11 @@ const Application = () => {
                 txTimeout={txTimeout}
               />
             </Route>
-            {/* <Route exact path="/verifier">
-              <TokenVerification />
-            </Route> */}
           </WalletProvider>
         </ConnectionProvider>
         <Route exact path="/" component={DomainHomePage} />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 };
 
