@@ -1,4 +1,14 @@
 .app-header {
   font-family: "ArcadeClassic", "Greycliff";
   border-bottom: 4px solid black;
+
+  &__logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  &__icon {
+    height: 25px;
+    width: 25px;
+  }
 }

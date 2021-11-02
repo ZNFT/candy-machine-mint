@@ -25,16 +25,14 @@
     height: 200px;
   }
 
-  &__empty-image {
-  }
-
   &__header {
     border: 4px solid black;
   }
 
   &__container {
-    background: url("../images/backgrounds/tool-background.jpg") no-repeat
+    background: url("../images/backgrounds/tool-background.png") no-repeat
       center center fixed;
+    min-height: calc(100vh - 67px);
   }
 
   &__error-toast {
